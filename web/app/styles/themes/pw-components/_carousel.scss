@@ -1,0 +1,100 @@
+// Carousel Theme
+// ===
+//
+// 1. Position context for the child `.pw--side-controls .pw-carousel__previous`
+//    and `.pw--side-controls .pw-carousel__next` elements
+
+.pw-carousel {
+    position: relative; // 1
+}
+
+
+// Carousel Modifier: Frame
+// ---
+
+.pw-carousel.pw--frame {
+    .pw-carousel__item {
+        margin: 0 $unit;
+        padding: $unit*3;
+
+        background: $neutral-00;
+        box-shadow: $box-shadow;
+    }
+}
+
+
+// Carousel Modifier: Side Controls
+// ---
+//
+// 1. Positioned absolute relative to the parent `pw-carousel` container
+
+.pw-carousel.pw--side-controls {
+    .pw-carousel__previous,
+    .pw-carousel__next {
+        position: absolute; // 1
+        top: 0;
+        bottom: 0;
+
+        display: flex;
+        width: $tap-size;
+
+        svg {
+            max-width: 100%;
+        }
+    }
+
+    .pw-carousel__previous {
+        left: $unit;
+    }
+
+    .pw-carousel__next {
+        right: $unit;
+    }
+}
+
+
+// Carousel Modifier: Hide Controls
+// ---
+
+.pw-carousel.pw--hide-controls {
+    .pw-carousel__previous,
+    .pw-carousel__next {
+        display: none;
+    }
+}
+
+
+// Carousel Controls
+// ---
+//
+// 1. Hide the carousel slide numbers from being displayed
+
+.pw-carousel__controls {
+    margin-bottom: $unit * 1.5;
+    padding-top: $unit * 1.5;
+}
+
+.pw-carousel__pips {
+    display: flex;
+    justify-content: center;
+}
+
+.pw-carousel__pip {
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+
+    border-radius: 50%;
+    background-color: $neutral-30;
+
+    color: transparent; // 1
+    font: 0/0 a; // 1
+
+    &.pw--active {
+        background-color: $neutral-60;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,14 @@
+// Notification Manager
+// ---
+//
+// 1. Prevent absolute positioned `<div>` from blocking clicks on elements
+//    below it
+
+.c-notification-manager {
+    position: fixed;
+    right: 0;
+    left: 0;
+
+    z-index: $z2-depth;
+    pointer-events: none; // 1
+}

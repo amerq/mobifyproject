@@ -1,0 +1,43 @@
+// MiniCart
+// ===
+
+.m-mini-cart {
+    // Root Class. Contains all core styles, typically for the template's
+    // wrapper element.
+}
+
+
+// Content
+// ---
+//
+// 1. Setting this here because the utility class overrides my flex-direction
+
+.m-mini-cart__content {
+    min-height: calc(100vh - #{$unit * 6.5});
+}
+
+
+// Empty Cart
+// ---
+
+.m-mini-cart__empty-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// Empty Message
+// ---
+
+.m-mini-cart__empty-message {
+    width: 80%;
+}
+
+
+// Sub-total
+// ---
+
+.m-mini-cart__subtotal {
+    border-top: 1px solid $neutral-15;
+}

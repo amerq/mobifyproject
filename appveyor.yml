@@ -1,0 +1,28 @@
+# Test against the latest version of this Node.js version
+environment:
+  nodejs_version: "6"
+
+cache:
+  - web/node_modules
+  - native/node_modules
+
+# Build only on these branches
+branches:
+  only:
+    - master
+    - develop
+
+# Install scripts. (runs after repo cloning)
+install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version
+  # install modules
+  - pushd web && npm install && popd
+
+test_script:
+  - pushd web && npm run smoke-test && popd
+
+artifacts:
+  - path: web\tests\screenshots
+    name: Screenshots
+

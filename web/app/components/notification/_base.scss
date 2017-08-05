@@ -1,0 +1,48 @@
+// Notification
+// ===
+
+$notification__duration: 0.4s;
+$notification__easing: cubic-bezier(0.45, 0.1, 0.5, 1);
+
+
+// Root
+// ---
+//
+// 1. Slight increase of height transition duration to give the staggered collapse animation
+// 2. Allow interactions with the notifications inside notification manager container
+
+.c-notification {
+    overflow: hidden;
+
+    background: rgba($brand-color, 0.9);
+
+    transform-origin: left top;
+
+    transition: height $notification__duration*2 $notification__easing; // 1
+    animation: visibility-show $notification__duration 1 forwards;
+
+    pointer-events: auto; // 2
+}
+
+
+// Action
+// ---
+
+.c-notification__action {
+    align-self: flex-start;
+}
+
+
+// State: Dismissing
+// ---
+//
+// 1. Prevent contents from leaking out
+// 2. Required for onTransitionEnd to actually fire for that component
+
+.c-notification.c--dismissing {
+    overflow: hidden; // 1
+    height: 0 !important; // 2
+    margin: 0;
+
+    animation: visibility-hide $notification__duration 1 forwards;
+}

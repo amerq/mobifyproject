@@ -1,0 +1,42 @@
+site_id: "merlinspotions"
+
+config:
+    mobify_property_id: "progressive-web-scaffold"
+    business_slug: "progressive-web-scaffold"
+    cloud_slug: "progressive-web-scaffold"
+
+    # Human-readable site name
+    friendly_site_name: "Mobify Progressive Web Scaffold"
+
+    # Must be a 192x192 icon file.
+    default_icon_url: "https://cdn.mobify.com/sites/progressive-web-scaffold/production/static/img/global/app-icon.png"
+
+    # Default is to use the URL for the target domain, via https
+    default_url:
+
+    # The domain (netloc) of the project's website, which must be
+    # https-everywhere. Do not include the 'https://' here - this
+    # is the domain name only.
+    target_domain: "www.merlinspotions.com"
+
+    # This is set for a Progressive Web App
+    pwa: true
+
+    # The App ID for iOS
+    apn_app_id: "ios.com.merlinspotions.www"
+
+    # The name of the certificate used for iOS push.
+    apn_native_certificate_name: "ios.com.merlinspotions.www"
+
+    # Send a push message to new subscribers confirming
+    # that they have subscribed.
+    send_welcome_message: true
+
+    # The default is the friendly_site_name
+    welcome_message_title: "Merlin's Potions"
+
+    # Edit this as required
+    welcome_message_text: "Thank you! We're super excited to have you here and tell you all the latest and greatest!"
+
+    # Default here should be the default_url
+    welcome_message_url: "https://www.merlinspotions.com/?utm_source=mobify&utm_medium=webpush"

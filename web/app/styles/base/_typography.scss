@@ -1,0 +1,94 @@
+// Typography
+// ===
+
+// Headers
+// ---
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading();
+}
+
+h1 {
+    @include h1();
+}
+
+h2 {
+    @include h2();
+}
+
+h3 {
+    @include h3();
+}
+
+h4 {
+    @include h4();
+}
+
+h5 {
+    @include h5();
+}
+
+h6 {
+    @include h6();
+}
+
+
+// Text Elements
+// ---
+
+p {
+    margin: 0;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:active,
+    &:focus {
+        color: $active-link-color;
+    }
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+small {
+    font-size: 80%;
+}
+
+
+// Miscellaneous Elements
+// ---
+//
+// 1. Address differences between Firefox and other browsers.
+
+hr {
+    box-sizing: content-box; // 1
+    height: 0; // 1
+    margin: ($unit * 2) 0;
+    border: $border;
+    border-width: 0 0 1px;
+
+    -moz-box-sizing: content-box; // 1
+}
+
+img {
+    max-width: 100%;
+    margin: 0;
+}
+
+blockquote {
+    margin: ($unit * 2) 0;
+    padding-left: $unit;
+    border-left: 2px solid $border-color;
+
+    color: lighten($font-color, 15);
+}

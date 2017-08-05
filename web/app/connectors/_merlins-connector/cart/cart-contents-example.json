@@ -1,0 +1,58 @@
+{
+  "cart": {
+    "summary_count": 3,
+    "subtotal": "<span class=\"price\">$50.40<\/span>",
+    "possible_onepage_checkout": true,
+    "items": [
+      {
+        "product_type": "simple",
+        "options": [],
+        "qty": 1,
+        "item_id": "1659",
+        "configure_url": "https:\/\/www.merlinspotions.com\/checkout\/cart\/configure\/id\/1659\/product_id\/7\/",
+        "is_visible_in_site_visibility": true,
+        "product_id": "7",
+        "product_name": "Sleeping Draught",
+        "product_url": "https:\/\/www.merlinspotions.com\/sleeping-draught.html",
+        "product_has_url": true,
+        "product_price": "<span class=\"price\">$24.00<\/span>",
+        "product_image": {
+          "src": "https:\/\/www.merlinspotions.com\/media\/catalog\/product\/cache\/1\/thumbnail\/75x75\/beff4985b56e3afdbeabfc89641a4582\/s\/l\/sleeping-draught-1.jpg",
+          "alt": "Sleeping Draught",
+          "width": "75",
+          "height": "75"
+        },
+        "canApplyMsrp": false
+      },
+      {
+        "product_type": "simple",
+        "options": [],
+        "qty": 2,
+        "item_id": "1658",
+        "configure_url": "https:\/\/www.merlinspotions.com\/checkout\/cart\/configure\/id\/1658\/product_id\/1\/",
+        "is_visible_in_site_visibility": true,
+        "product_id": "1",
+        "product_name": "Eye Of Newt",
+        "product_url": "https:\/\/www.merlinspotions.com\/eye-of-newt.html",
+        "product_has_url": true,
+        "product_price": "<span class=\"price\">$12.00<\/span>",
+        "product_image": {
+          "src": "https:\/\/www.merlinspotions.com\/media\/catalog\/product\/cache\/1\/thumbnail\/75x75\/beff4985b56e3afdbeabfc89641a4582\/e\/y\/eye-of-newt-1.jpg",
+          "alt": "Eye Of Newt",
+          "width": "75",
+          "height": "75"
+        },
+        "canApplyMsrp": false
+      }
+    ],
+    "extra_actions": "",
+    "isGuestCheckoutAllowed": true,
+    "subtotal_incl_tax": "<span class=\"price\">$50.40<\/span>",
+    "subtotal_excl_tax": "<span class=\"price\">$48.00<\/span>",
+    "data_id": 1492733006
+  },
+  "messages": {
+    "messages": [],
+    "data_id": 1492733006
+  }
+}

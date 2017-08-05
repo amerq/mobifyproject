@@ -1,0 +1,18 @@
+// Header Bar Theme
+// ===
+
+.pw-header-bar {
+    padding: $unit/2;
+
+    background-color: $brand-color; // ui_kit_value: $secondary-brand-color;
+
+    color: $neutral-00;
+}
+
+
+// Title
+// ---
+
+.pw-header-bar__title {
+    line-height: 0;
+}

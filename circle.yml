@@ -1,0 +1,27 @@
+machine:
+    node:
+        version: 6.9.2
+dependencies:
+    cache_directories:
+        - "web/node_modules"
+        # - "native/node_modules"
+    pre:
+        - ./scripts/setup-env-ci.sh:
+            pwd: web
+        # Disabling native `npm install` for now as we aren't set up to `npm install` a git dep yet
+        #- npm install:
+        #    pwd: native
+test:
+    override:
+        - ./tests/system/test-scripts/run-all-tests-on-ci.sh:
+            pwd: web
+            parallel: true
+    post:
+        - ./scripts/upload-artifacts-ci.sh:
+            pwd: web
+experimental:
+    notify:
+        branches:
+            only:
+                - master
+                - develop

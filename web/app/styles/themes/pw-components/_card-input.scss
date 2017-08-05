@@ -1,0 +1,25 @@
+// Card Input Theme
+// ===
+
+// Root
+// ---
+//
+// 1. `pw-card-input` is used inside `pw-field__input` which has `display: flex`
+//    using `flex: 1 1 auto` so card input will stretch and fill the available space
+// 2. Nesting classes to increase specificity to override `pw-icon` styles
+
+.pw-card-input {
+    flex: 1 1 auto; // 1
+
+    // 2
+    .pw-card-input__card-icon {
+        width: $tap-size;
+        height: $tap-size;
+        padding: 0;
+    }
+
+    // 2
+    .pw-card-input__card-icon--card {
+        display: none;
+    }
+}

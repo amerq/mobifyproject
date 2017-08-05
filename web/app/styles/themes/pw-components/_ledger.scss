@@ -1,0 +1,81 @@
+// Ledger Theme
+// ===
+//
+// 1. Remove the default table margin
+
+.pw-ledger {
+    margin: 0; // 1
+}
+
+
+// Item
+// ---
+//
+// 1. Override base <td> padding style
+
+.pw-ledger__item {
+    padding: 0; // 1
+
+    .pw-ledger__action {
+        color: $neutral-50;
+        font-size: $small-font-size;
+    }
+}
+
+
+// Value
+// ---
+//
+// 1. Override base <td> padding style
+
+.pw-ledger__value {
+    padding: 0; // 1
+
+    font-weight: $semi-bold-font-weight;
+    font-size: $medium-font-size;
+}
+
+
+// Row
+// ---
+
+.pw-ledger__row {
+    padding: $unit * 1.5;
+
+    &:not(:first-of-type) {
+        border-top: 1px solid $neutral-15;
+    }
+}
+
+
+// Total
+// ---
+
+.pw-ledger__row.pw--total {
+    justify-content: center;
+
+    font-weight: $semi-bold-font-weight;
+
+    &,
+    .pw-ledger__value {
+        font-size: $big-font-size;
+    }
+
+    .pw-ledger__item {
+        flex: 0 0 auto;
+
+        &::after {
+            content: ':\00A0';
+        }
+    }
+}
+
+
+// Sale
+// ---
+
+.pw-ledger__row.pw--sale {
+    .pw-ledger__value {
+        color: $sale-color;
+    }
+}

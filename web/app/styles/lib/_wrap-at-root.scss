@@ -1,0 +1,49 @@
+// Wrap At Root
+// ===
+//
+// Wraps the nested blocks in the `$selector` of your choice, and at the root
+// level. Specificity of the selector can be increased by increasing the
+// `$degree` to a higher number than the default `1`.
+
+// Examples:
+// ---
+//
+// Default:
+//
+// @include wrap-at-root("#app") {
+//     .u-border-red { border: 1px solid red; }
+// }
+//
+// Output: #app .u-border-red { border: 1px solid red; }
+//
+//
+// Custom:
+//
+// @include wrap-at-root("#app", 3) {
+//     .u-border-red { border: 1px solid red; }
+// }
+//
+// Output: #app#app#app .u-border-red { border: 1px solid red; }
+
+
+// Parameters
+// ---
+//
+// @param $selector [String]: ID selector.
+// @param $degree [Number]: Effectively the number of id-level selectors you
+// need to override.
+
+@mixin wrap-at-root($selector, $degree: 1) {
+    $selector-chain: '';
+
+    // Build an id selector by chaining the same id onto itself once more than
+    // the specified degree. So if degree: 3, we get #id#id#id.
+
+    @for $i from 1 through $degree {
+        $selector-chain: $selector-chain + $selector;
+    }
+
+    @at-root #{$selector-chain} {
+        @content;
+    }
+}

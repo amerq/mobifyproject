@@ -1,0 +1,27 @@
+// Divider Theme
+// ===
+//
+// 1. Account for size of the physical line, which takes up a pixel of height
+
+.pw-divider {
+    padding-top: $unit*2 - 1; // 1
+    padding-bottom: $unit*2;
+
+    &::after,
+    &::before {
+        border-top: 1px solid rgba($neutral-15, 0.26);
+    }
+
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        right: 0;
+    }
+}
+
+.pw-divider__text {
+    max-width: 80%;
+    padding: 0 $unit;
+}

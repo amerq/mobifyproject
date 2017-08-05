@@ -1,0 +1,14 @@
+{
+  "name": "mobifyproject",
+  "short_name": "mobifyproject",
+  "start_url": "https://www.merlinspotions.com/",
+  "background_color": "#fff",
+  "theme_color":" #4e439b",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "https://cdn.mobify.com/sites/progressive-web-scaffold/production/static/img/global/app-icon.png",
+      "sizes": "192x192"
+    }
+  ]
+}

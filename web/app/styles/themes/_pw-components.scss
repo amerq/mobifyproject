@@ -1,0 +1,107 @@
+// Progressive Web Themes
+// ===
+//
+// This file contains all the imports necessary for styling the Progressive Web
+// SDK components, which includes their base styles from the SDK node module, as
+// well as imports for their project specific themes.
+//
+// Uncomment (or comment out) the imports below to include or exclude either a
+// component's base or local theme style.
+//
+//
+// Table Of Contents
+// ---
+//
+//     [AAA] Progressive Web SDK Base Styles (from progressive-web-sdk node_modules)
+//     [BBB] Progressive Web SDK Custom Styles (local customizations)
+
+
+// [AAA] Progressive Web SDK Base Styles
+// ---
+//
+// Most of the Progressive Web SDK components have base styles and are often
+// required in order for that component to function correctly.
+
+@import 'node_modules/progressive-web-sdk/dist/components/accordion/base';
+@import 'node_modules/progressive-web-sdk/dist/components/badge/base';
+@import 'node_modules/progressive-web-sdk/dist/components/breadcrumbs/base';
+@import 'node_modules/progressive-web-sdk/dist/components/button/base';
+@import 'node_modules/progressive-web-sdk/dist/components/card-input/base';
+@import 'node_modules/progressive-web-sdk/dist/components/card-verification/base';
+@import 'node_modules/progressive-web-sdk/dist/components/carousel/base';
+@import 'node_modules/progressive-web-sdk/dist/components/divider/base';
+@import 'node_modules/progressive-web-sdk/dist/components/field/base';
+@import 'node_modules/progressive-web-sdk/dist/components/field-row/base';
+@import 'node_modules/progressive-web-sdk/dist/components/grid/base';
+@import 'node_modules/progressive-web-sdk/dist/components/header-bar/base';
+@import 'node_modules/progressive-web-sdk/dist/components/icon/base';
+@import 'node_modules/progressive-web-sdk/dist/components/icon-label/base';
+@import 'node_modules/progressive-web-sdk/dist/components/image/base';
+@import 'node_modules/progressive-web-sdk/dist/components/inline-loader/base';
+@import 'node_modules/progressive-web-sdk/dist/components/ledger/base';
+@import 'node_modules/progressive-web-sdk/dist/components/list/base';
+@import 'node_modules/progressive-web-sdk/dist/components/list-tile/base';
+// @import 'node_modules/progressive-web-sdk/dist/components/lockup/base'; // has base styles, but isn't used
+@import 'node_modules/progressive-web-sdk/dist/components/nav/base';
+// @import 'node_modules/progressive-web-sdk/dist/components/nav-header/base'; // has base styles, but isn't used
+@import 'node_modules/progressive-web-sdk/dist/components/nav-item/base';
+@import 'node_modules/progressive-web-sdk/dist/components/nav-menu/base';
+@import 'node_modules/progressive-web-sdk/dist/components/nav-slider/base';
+// @import 'node_modules/progressive-web-sdk/dist/components/nested-navigation/base'; // has base styles, but isn't used
+@import 'node_modules/progressive-web-sdk/dist/components/password-input/base';
+@import 'node_modules/progressive-web-sdk/dist/components/progress-steps/base';
+// @import 'node_modules/progressive-web-sdk/dist/components/pagination/base'; // has base styles, but isn't used
+// @import 'node_modules/progressive-web-sdk/dist/components/rating/base'; // has base styles, but isn't used
+@import 'node_modules/progressive-web-sdk/dist/components/ratio/base';
+@import 'node_modules/progressive-web-sdk/dist/components/search/base';
+@import 'node_modules/progressive-web-sdk/dist/components/sheet/base';
+@import 'node_modules/progressive-web-sdk/dist/components/skeleton-block/base';
+@import 'node_modules/progressive-web-sdk/dist/components/skeleton-inline/base';
+@import 'node_modules/progressive-web-sdk/dist/components/skeleton-text/base';
+@import 'node_modules/progressive-web-sdk/dist/components/skip-links/base';
+@import 'node_modules/progressive-web-sdk/dist/components/stepper/base';
+@import 'node_modules/progressive-web-sdk/dist/components/tabs/base';
+@import 'node_modules/progressive-web-sdk/dist/components/default-ask/base';
+@import 'node_modules/progressive-web-sdk/dist/components/default-ask/theme';
+
+
+// [BBB] Progressive Web SDK Custom Styles
+// ---
+//
+// Any Progressive Web SDK component can be customized using SCSS. The files
+// imported below apply project specific custom styles to the Progressive Web
+// SDK components. Because these custom styles are not crucial to the
+// functionality of their components, these imported files can be removed or
+// modified at the user's discretion.
+
+@import 'pw-components/accordion';
+@import 'pw-components/badge';
+@import 'pw-components/breadcrumbs';
+@import 'pw-components/button';
+@import 'pw-components/card-input';
+@import 'pw-components/card-verification';
+@import 'pw-components/carousel';
+@import 'pw-components/divider';
+@import 'pw-components/field';
+@import 'pw-components/field-row';
+@import 'pw-components/header-bar';
+@import 'pw-components/icon';
+@import 'pw-components/icon-label';
+@import 'pw-components/image';
+@import 'pw-components/inline-loader';
+@import 'pw-components/ledger';
+@import 'pw-components/list';
+@import 'pw-components/list-tile';
+@import 'pw-components/nav';
+@import 'pw-components/nav-item';
+@import 'pw-components/nav-menu';
+@import 'pw-components/nav-slider';
+@import 'pw-components/progress-steps';
+@import 'pw-components/password-input';
+@import 'pw-components/search';
+@import 'pw-components/sheet';
+@import 'pw-components/skeleton-block';
+@import 'pw-components/skeleton-inline';
+@import 'pw-components/skeleton-text';
+@import 'pw-components/stepper';
+@import 'pw-components/tabs';

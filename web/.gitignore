@@ -1,0 +1,12 @@
+.nyc_output
+build.tar
+
+coverage
+tests/reports
+tests/screenshots
+lighthouse/audit*
+
+app/loader-routes.js
+.tern-port
+app/integration-manager/docs
+messaging/*.csr

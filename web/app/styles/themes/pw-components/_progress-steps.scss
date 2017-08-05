@@ -1,0 +1,102 @@
+// Progress Steps Theme
+// ===
+
+.pw-progress-steps {
+    padding-top: $unit * 1.5;
+}
+
+
+// Item
+// ---
+
+.pw-progress-steps__item {
+    color: $neutral-40;
+}
+
+
+// Number
+// ---
+
+.pw-progress-steps__number {
+    &::before,
+    &::after {
+        width: 80%;
+        border-top-width: 2px;
+    }
+
+    &::before {
+        margin-right: 20%;
+    }
+
+    &::after {
+        margin-left: 20%;
+    }
+}
+
+
+// Badge
+// ---
+//
+// 1. Ensure that the icons do NOT shrink
+// 2. Match width and height to the mock
+
+.pw-progress-steps__badge {
+    flex: 0 0 auto; // 1
+    width: $unit * 3; // 2
+    height: $unit * 3; // 2
+    border: 0;
+
+    border-radius: 0;
+    background: none;
+}
+
+
+// Icon
+// ---
+//
+// @TODO: Add this missing icon class to the SDK, or add a `iconSize` prop to
+//        the ProgressStepsItem component
+
+.pw-progress-steps__icon,
+.pw-progress-steps__badge .pw-icon {
+    width: $unit * 3;
+    height: $unit * 3;
+}
+
+
+// Title
+// ---
+
+.pw-progress-steps__title {
+    padding-bottom: $unit * 2;
+
+    font-size: 12px;
+    line-height: 12px;
+}
+
+
+// States
+// ---
+
+.pw-progress-steps__item.pw--completed {
+    .pw-progress-steps__step {
+        color: $font-color;
+        font-weight: bold;
+    }
+
+    .pw-progress-steps__number::before,
+    .pw-progress-steps__number::after {
+        border-color: $font-color;
+    }
+}
+
+.pw-progress-steps__item.pw--current {
+    border-bottom: 2px solid $brand-color;
+
+    color: $brand-color;
+    font-weight: bold;
+
+    .pw-progress-steps__number::before {
+        border-color: $font-color;
+    }
+}

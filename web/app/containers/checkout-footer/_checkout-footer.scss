@@ -1,0 +1,40 @@
+// Footer
+// ===
+
+
+// Root
+// ---
+
+.t-checkout-footer {
+    background-color: $brand-color;
+}
+
+
+// Navigation
+// ---
+
+.t-checkout-footer__inner {
+    color: $neutral-00;
+}
+
+// Copyright
+// ---
+
+.t-checkout-footer__copyright {
+    opacity: 0.5;
+
+    font-size: $small-font-size;
+    line-height: $font-size;
+}
+
+.t-checkout-footer__logo {
+    width: 67px;
+    height: 28px;
+}
+
+.t-checkout-footer__logo-wrapper {
+    [id*='logo-sparkle-1'],
+    [id*='logo-sparkle-2'] {
+        opacity: 0.5;
+    }
+}

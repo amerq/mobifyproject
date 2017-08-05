@@ -1,0 +1,28 @@
+// App.scss
+// ===
+
+.t-app {
+    // Root Class. Contains all core styles, typically for the template's
+    // wrapper element.
+}
+
+
+// Wrapper
+// ---
+//
+// 1. This, combined with the flexbox classes in the template, create a sticky
+//    footer effect!
+
+.t-app__wrapper {
+    min-height: 100vh; // 1
+}
+
+
+
+// Modifiers
+// ---
+
+.t-app.t-app--checkout-payment,
+.t-app.t-app--checkout-confirmation {
+    background-color: $neutral-10;
+}

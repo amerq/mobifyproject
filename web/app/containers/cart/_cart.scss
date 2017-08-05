@@ -1,0 +1,151 @@
+// Cart
+// ===
+
+$cart__approximate-header-height: 52px;
+$cart__approximate-footer-height: 173px;
+$cart__content-height: calc(100vh - #{$cart__approximate-header-height} - #{$cart__approximate-footer-height});
+$cart__custom-ease-out: cubic-bezier(0.35, 0.35, 0.32, 1);
+
+// Root
+// ---
+
+.t-cart {
+    min-height: 100vh;
+
+    transition: min-height 0.5s $cart__custom-ease-out;
+
+    &.t--loaded {
+        min-height: $cart__content-height;
+    }
+}
+
+
+// Empty State
+// ---
+//
+// 1. Prevent the hidden empty container from creating unwanted white-space
+
+.t-cart__empty {
+    min-height: $cart__content-height;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition: opacity 0.5s ease-in, transform 0.5s $cart__custom-ease-out;
+
+    &.t--viewport-height {
+        min-height: 100vh;
+    }
+
+    &.t--hide {
+        margin-bottom: -100% !important; // 1
+
+        opacity: 0;
+
+        transform: translateY(5%);
+    }
+}
+
+
+// Summary Wrapper
+// ---
+
+.t-cart__summary-wrapper {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition: opacity 0.5s ease-in, transform 0.5s $cart__custom-ease-out;
+
+    &.t--hide {
+        opacity: 0;
+
+        transform: translateY(5%);
+    }
+}
+
+
+// Product Content Placeholder
+// ---
+//
+// This is meant to emulate the height of the cart product's quantity and edit,
+// save for later and remove buttons.
+
+.t-cart__product-content-placeholder {
+    width: 1px;
+    height: 126px;
+}
+
+
+// Product Stepper
+// ---
+//
+// 1. Force this input to overlap with the buttons to make it look smaller than
+//    it actually is.
+// 2. Ensure the buttons sit above the text input
+
+.t-cart__product-stepper {
+    [type="tel"] {
+        margin-right: -$unit * 2; // 1
+        margin-left: -$unit * 2; // 1
+    }
+
+    button {
+        z-index: 1; // 2
+    }
+}
+
+
+// Promo Input
+// ---
+
+.t-cart__promo-input {
+    border-right: 0;
+}
+
+
+// Mobile Styles
+// ---
+
+@include susy-breakpoint($mobile-breakpoint, $mobile-layout) {
+    .t-cart__product-list-title,
+    .t-cart__summary-title {
+        padding-left: $unit * 1.5;
+    }
+
+    .t-cart__summary-title {
+        padding-top: $unit * 1.5;
+        padding-bottom: $unit * 1.5;
+    }
+}
+
+
+// Tablet Styles
+// ---
+
+@include susy-breakpoint($tablet-breakpoint, $tablet-layout) {
+    .t-cart {
+        padding-bottom: $unit * 2;
+    }
+
+    .t-cart__summary-title {
+        padding-top: $unit * 3;
+        padding-bottom: $unit * 2.5;
+    }
+}
+
+
+// Desktop Styles
+// ---
+
+@include susy-breakpoint($desktop-breakpoint, $desktop-layout) {
+    .t-cart {
+        padding-bottom: $unit * 2;
+    }
+
+    .t-cart__summary-title {
+        padding-top: $unit * 3;
+        padding-bottom: $unit * 2.5;
+    }
+}

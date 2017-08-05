@@ -1,0 +1,26 @@
+// Offline
+// ===
+//
+// 1. Fill available vertical space (since we have no footer)
+// 2. Ensure offline banner appears above page content when visible
+
+// Offline container
+.t-offline {
+    flex: 1; // 1
+    padding: 25% $unit*1.5 0;
+    background-color: $background-color;
+    text-align: center;
+}
+
+// Offline banner
+.t-offline-banner__wrapper {
+    padding-top: 44px;
+}
+
+.t-offline-banner {
+    position: fixed;
+    top: 52px;
+    z-index: $z2-depth; // 2
+    background-color: $neutral-60;
+    color: $neutral-10;
+}

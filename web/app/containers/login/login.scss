@@ -1,0 +1,18 @@
+// Login
+// ===
+
+
+.t-login {
+    // Root Class. Contains all core styles, typically for the template's
+    // wrapper element.
+}
+
+
+// Registration
+// ---
+
+.t-login__register-fieldset {
+    &:not(:first-of-type) {
+        margin-top: $unit*4;
+    }
+}

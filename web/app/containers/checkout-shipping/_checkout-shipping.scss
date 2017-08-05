@@ -1,0 +1,82 @@
+// CheckoutShipping
+// ===
+
+.t-checkout-shipping {
+    min-height: 100vh;
+
+    transition: min-height 2s ease-out;
+
+    &.t--loaded {
+        min-height: 0;
+    }
+}
+
+
+// Progress
+// ---
+
+.t-checkout-shipping__progress {
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+// Form
+// ---
+//
+// @TODO: Add `pw-field__label` to SDK field component
+
+.t-checkout-shipping__form {
+    .pw-field__label {
+        font-size: 15px;
+    }
+}
+
+
+// Add New Address
+// ---
+
+.t-checkout-payment__add-new-address {
+    transition: padding 0.2s ease-out;
+}
+
+.t-checkout-payment__add-new-address-form {
+    opacity: 0;
+
+    animation: fade-in 0.2s 0.2s ease-out 1 forwards;
+}
+
+
+// Mobile Styles
+// ---
+
+@include susy-breakpoint($mobile-breakpoint, $mobile-layout) {
+    .t-checkout-shipping__email-title {
+        padding-top: $unit * 2;
+    }
+
+    .t-checkout-shipping__title {
+        padding-left: $unit * 1.5;
+    }
+}
+
+
+// Tablet Styles
+// ---
+
+@include susy-breakpoint($tablet-breakpoint, $tablet-layout) {
+    .t-checkout-shipping__email-title {
+        padding-top: $unit * 2;
+    }
+}
+
+
+// Desktop Styles
+// ---
+
+@include susy-breakpoint($desktop-breakpoint, $desktop-layout) {
+    .t-checkout-shipping__email-title {
+        padding-top: $unit * 7;
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "business_id": "56c3681586312e000e000001",
+    "configs": [
+        {
+            "selector": "#donde-closest-locations-widget-1",
+            "nthNearest": 1,
+            "maxDistance": "100",
+            "showSpinner": false,
+            "template": "<% if(id){ %> <div class=\"pw-list-tile u-border-light-bottom u-text-family pw--is-anchor\"><a href=\"http://locations.merlinspotions.com<%=llpURL%>\" class=\"pw-link pw-list-tile__primary\"><div class=\"pw-list-tile__action\"><svg aria-hidden=\"true\" class=\"pw-icon\" title=\"Store Icon\" aria-labelledby=\"icon-888\"><title id=\"icon-888\"></title><use role=\"img\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#pw-store\"></use></svg></div><div class=\"pw-list-tile__content u-padding-0 u-justify-between u-direction-row\"> <div><%=city%></div> <div class=\"u-text-weight-bold\"><%=distanceKM%>km</div> </div><div class=\"pw-list-tile__action\"><button class=\"pw-button pw--blank pw--icon-only pw--icon-only\" type=\"button\"><div class=\"pw-button__inner\"><svg aria-hidden=\"true\" class=\"pw-icon pw-button__icon\" title=\"Chevron Right Icon\" aria-labelledby=\"icon-999\"><title id=\"icon-999\"></title><use role=\"img\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#pw-chevron-right\"></use></svg></div></button></div></a></div> <% } else { %> <div class=\"u-padding-md u-text-align-center\">Sorry, No locations near you.</div> <% } %>"
+        },
+        {
+            "selector": "#donde-closest-locations-widget-2",
+            "nthNearest": 2,
+            "maxDistance": "100",
+            "template": "<% if(id){ %> <div class=\"pw-list-tile u-border-light-bottom u-text-family pw--is-anchor\"><a href=\"http://locations.merlinspotions.com<%=llpURL%>\" class=\"pw-link pw-list-tile__primary\"><div class=\"pw-list-tile__action\"><svg aria-hidden=\"true\" class=\"pw-icon\" title=\"Store Icon\" aria-labelledby=\"icon-888\"><title id=\"icon-888\"></title><use role=\"img\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#pw-store\"></use></svg></div><div class=\"pw-list-tile__content u-padding-0 u-justify-between u-direction-row\"> <div><%=city%></div> <div class=\"u-text-weight-bold\"><%=distanceKM%>km</div> </div><div class=\"pw-list-tile__action\"><button class=\"pw-button pw--blank pw--icon-only pw--icon-only\" type=\"button\"><div class=\"pw-button__inner\"><svg aria-hidden=\"true\" class=\"pw-icon pw-button__icon\" title=\"Chevron Right Icon\" aria-labelledby=\"icon-999\"><title id=\"icon-999\"></title><use role=\"img\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#pw-chevron-right\"></use></svg></div></button></div></a></div> <% } else { %><% } %>"
+        },
+        {
+            "selector": "#donde-closest-locations-widget-3",
+            "nthNearest": 3,
+            "maxDistance": "100",
+            "template": "<% if(id){ %> <div class=\"pw-list-tile u-border-light-bottom u-text-family pw--is-anchor\"><a href=\"http://locations.merlinspotions.com<%=llpURL%>\" class=\"pw-link pw-list-tile__primary\"><div class=\"pw-list-tile__action\"><svg aria-hidden=\"true\" class=\"pw-icon\" title=\"Store Icon\" aria-labelledby=\"icon-888\"><title id=\"icon-888\"></title><use role=\"img\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#pw-store\"></use></svg></div><div class=\"pw-list-tile__content u-padding-0 u-justify-between u-direction-row\"> <div><%=city%></div> <div class=\"u-text-weight-bold\"><%=distanceKM%>km</div> </div><div class=\"pw-list-tile__action\"><button class=\"pw-button pw--blank pw--icon-only pw--icon-only\" type=\"button\"><div class=\"pw-button__inner\"><svg aria-hidden=\"true\" class=\"pw-icon pw-button__icon\" title=\"Chevron Right Icon\" aria-labelledby=\"icon-999\"><title id=\"icon-999\"></title><use role=\"img\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#pw-chevron-right\"></use></svg></div></button></div></a></div> <% } else { %><% } %>"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "discount": {
+        "amount": "-$1.50",
+        "label": "magic",
+        "code": "magic"
+    },
+    "shipping": {
+        "amount": "$0.00"
+    },
+    "subtotal": "$10.00",
+    "tax": "$0.43",
+    "orderTotal": "$8.93"
+}

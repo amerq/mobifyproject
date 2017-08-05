@@ -1,0 +1,41 @@
+// Footer
+// ===
+
+
+// Root
+// ---
+
+.t-footer {
+    //
+}
+
+// Navigation
+// ---
+
+.t-footer__navigation {
+    background-color: $brand-color; // ui_kit_value: $secondary-brand-color;
+
+    color: #fff;
+}
+
+
+.t-footer__navigation-link {
+    display: inline-block;
+    margin-right: $unit;
+    margin-left: $unit;
+    padding-bottom: $unit;
+
+    color: #fff;
+    font-size: $small-font-size;
+}
+
+
+
+// Panel Newsletter
+// ---
+
+.t-footer__newsletter {
+    .pw-field__label {
+        @include visually-hidden();
+    }
+}

@@ -1,0 +1,47 @@
+// Accordion Theme
+// ===
+
+.pw-accordion {
+    border-top: 1px solid $neutral-15;
+    border-bottom: 1px solid $neutral-15;
+}
+
+.pw-accordion__item {
+    &:not(:last-child) {
+        border-bottom: 1px solid $neutral-15;
+    }
+}
+
+.pw-accordion__icon {
+    min-width: $unit*5;
+}
+
+.pw-accordion__open-icon,
+.pw-accordion__close-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $unit*5;
+    height: $unit*5;
+
+    color: $brand-color;
+
+    .pw-accordion__glyph {
+        width: $unit*2;
+        height: $unit*2;
+        padding: 0;
+    }
+}
+
+.pw-accordion__inner-header {
+    align-items: center;
+}
+
+.pw-accordion__title {
+    font-size: $font-size+2;
+    text-align: left;
+}
+
+.pw-accordion__content {
+    padding: $unit*1.5 $unit*1.5 $unit*2;
+}

@@ -1,0 +1,76 @@
+// Home.scss
+// ===
+
+
+// Container
+// ---
+//
+// 1. Display box-shadow properly at bottom of container by increasing position
+//    context above that of the footer (.t-footer__newsletter)
+// 2. Fixes white space appearing below carousel images
+// 3. Force `max-height` on the carousel, since the Image component can't
+//    yet take a `style` prop. @TODO: Add `style` prop to Image?
+// 4. Style loading nearby widget added inline before nearby widget load
+
+.t-home__container {
+    position: relative; // 1
+
+    background-color: $background-color; // ui_kit_value: transparent;
+    box-shadow: $inset-box-shadow; // ui_kit_value: none;
+
+    font-family: $header-font-family;
+
+    // Added with webfontloader. See loadFonts() in app/container.js
+    .wf-active & {
+        font-family: $loaded-header-font-family;
+    }
+
+    .pw-carousel__inner {
+        max-height: 84vw; // 3
+
+        line-height: 0; // 2
+    }
+
+    .nearby-widget-spinner {
+        padding: $unit*1.5; // 4
+
+        font-family: $font-family; // 4
+        text-align: center; // 4
+
+        .nearby-widget-spinner-img {
+            margin: auto; // 4
+        }
+    }
+}
+
+
+// Category Section
+// ---
+//
+// 1. Necessary for now because ListTile does not accept a className prop for
+//    customizing the Primary Action. @TODO: fix this in the SDK
+
+.t-home__category-section {
+    a {
+        color: $neutral-60; // 1
+    }
+
+    &:not(:first-child) {
+        border-top: solid #eee 1px;
+    }
+
+    .pw-list-tile__action {
+        margin: $unit 0 $unit ($unit / 2);
+    }
+
+    .pw-list-tile__content {
+        padding: ($unit * 1.5) 0 ($unit * 1.5) ($unit * 2);
+    }
+}
+
+.t-home__category-text {
+    &.t--text-large {
+        font-size: $bigger-font-size;
+        line-height: 25px;
+    }
+}

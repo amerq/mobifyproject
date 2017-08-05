@@ -1,0 +1,51 @@
+// CheckoutConfirmation
+// ===
+
+.t-checkout-confirmation {
+    // Root Class. Contains all core styles, typically for the template's
+    // wrapper element.
+}
+
+
+// Mobile Styles
+// ---
+
+@include susy-breakpoint($mobile-breakpoint, $mobile-layout) {
+    .t-checkout-confirmation__thanks,
+    .t-checkout-confirmation__heading {
+        padding-right: $unit * 2;
+        padding-left: $unit * 2;
+    }
+}
+
+
+// Tablet Styles
+// ---
+//
+@include susy-breakpoint($tablet-breakpoint, $tablet-layout) {
+    .t-checkout-confirmation__card {
+        border-right: 1px solid $neutral-15;
+        border-left: 1px solid $neutral-15;
+    }
+}
+
+
+// Desktop Styles
+// ---
+//
+// 1. Override a higher specificity grid style
+
+@include susy-breakpoint($desktop-breakpoint, $desktop-layout) {
+    .t-checkout-confirmation__card {
+        border-right: 1px solid $neutral-15;
+        border-left: 1px solid $neutral-15;
+    }
+
+    .t-checkout-confirmation__thanks {
+        padding-top: $unit * 2;
+    }
+
+    .t-checkout-confirmation__splash-image {
+        float: right !important; // 1
+    }
+}

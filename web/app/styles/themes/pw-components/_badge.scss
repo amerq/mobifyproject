@@ -1,0 +1,12 @@
+// Badge Theme
+// ===
+
+.pw-badge {
+    min-width: $unit*2.5;
+
+    border-radius: 0.85em;
+    background: $accent-color; // ui_kit_value: $primary-action-color;
+
+    font-size: $font-size - 2;
+    line-height: $unit*2.5;
+}

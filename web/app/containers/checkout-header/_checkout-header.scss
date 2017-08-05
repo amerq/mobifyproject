@@ -1,0 +1,28 @@
+// Checkout Header
+// ===
+//
+// 1. The expected height of the site HeaderBar (.t-checkout-header__bar)
+// 2. Ensure header bar appears above page content
+
+$checkout-header__height: 52px; // 1
+
+.t-checkout-header {
+    padding-top: $checkout-header__height;
+}
+
+
+// Bar
+// ---
+
+.t-checkout-header__bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z2-depth; // 2
+
+    overflow: hidden;
+    width: 100vw;
+    min-height: $checkout-header__height;
+
+    box-shadow: $large-box-shadow;
+}

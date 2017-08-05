@@ -1,0 +1,55 @@
+/*
+This file will be minified and auto-prefixed, there's no need to add
+browser-prefixes
+*/
+
+/* Progress animation */
+@keyframes background-shimmer {
+    0% {
+        transform: translateX(50000%);
+    }
+
+    to {
+        transform: translateX(-50000%);
+    }
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    background-color: #f7f7f7; /* ui_kit_value: #f2f2f2; /* Same as $neutral-10 */
+}
+
+body::after {
+    content: '';
+
+    display: block;
+    width: 1px;
+    height: calc(100vh - 52px); /* 52px is same height as .t-header */
+
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 100px 75px rgba(0, 0, 0, 0.05);
+
+    animation: 1.5s linear infinite background-shimmer;
+}
+
+.preloader__header {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 52px; /* Same height as .t-header */
+
+    background: #41378c; /* Same as $brand-color */  /* ui_kit_value: #005c83; /* Same as $secondary-brand-color */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3); /* Same as $large-box-shadow */
+}
+
+.preloader__logo {
+    /**/
+}

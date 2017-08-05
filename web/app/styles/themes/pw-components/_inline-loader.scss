@@ -1,0 +1,56 @@
+// InlineLoader Theme
+// ===
+
+.pw-inline-loader {
+    // Root Class theme styles
+}
+
+
+// Loading Dot
+// ---
+//
+// 1. Square ratio to create a circle so it can shrink and resize proportionally
+
+.pw-inline-loader__loading-dot {
+    opacity: 0;
+
+    transform: scale(1);
+
+    animation: inline-loader-pulse 1s ease-in-out infinite;
+
+    &::after {
+        content: '';
+
+        display: block;
+        padding-bottom: 100%; // 1
+
+        border-radius: 100%;
+        background-color: $brand-color;
+    }
+
+    + .pw-inline-loader__loading-dot {
+        margin-left: $unit;
+    }
+}
+
+
+// Modifier: white
+// ---
+
+.pw-inline-loader.pw--white {
+    .pw-inline-loader__loading-dot {
+        &::after {
+            background-color: $neutral-00;
+        }
+    }
+}
+
+
+// Modifier: small (10px)
+// ---
+
+.pw-inline-loader.pw--small {
+    .pw-inline-loader__loading-dot {
+        width: $sub-unit*2.5;
+    }
+}

@@ -1,0 +1,10 @@
+// Product List Filter Modal
+// ---
+
+.m-product-list__filter-modal {
+    min-height: calc(100vh - #{$unit * 6.5});
+}
+
+.m-product-list__filter-modal-items {
+    margin: -$unit * 1.5;
+}

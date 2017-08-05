@@ -1,0 +1,62 @@
+// _product-list.scss
+// ===
+
+.t-product-list {
+    //
+}
+
+
+// Container
+// ---
+//
+// 1. Ensure the box-shadow at bottom of container is visible
+
+.t-product-list__container {
+    background-color: $background-color; // ui_kit_value: transparent;
+    box-shadow: $inset-box-shadow; // ui_kit_value: none;
+}
+
+
+// Breadcrumb
+// ---
+//
+// @TODO: Turn this into a component
+//
+// 1. Ensure the container only takes up this amount of vertical space
+
+.t-product-list__breadcrumb {
+    font-size: $unit * 1.5; // 1
+    line-height: $unit * 1.5; // 1
+}
+
+
+// No Results
+// ---
+
+.t-product-list__no-results-text {
+    padding: ($unit * 3) ($unit * 6) ($unit * 2);
+}
+
+
+// Filter
+// ---
+
+.t-product-list__filter {
+    width: 50%;
+}
+
+
+// Active Filter
+// ---
+
+.t-product-list__active-filter {
+    font-size: 15px;
+}
+
+
+// Sort Filter
+// ---
+
+.t-product-list__sort {
+    width: 50%;
+}

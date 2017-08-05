@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>youtube</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="global/footer" transform="translate(-240.000000, -220.000000)" fill="#4E439B">
+            <g id="Group-2" transform="translate(55.000000, 220.000000)">
+                <path d="M200,3.55271368e-15 C191.694336,3.55271368e-15 185,6.69433594 185,15 C185,23.3056641 191.694336,30 200,30 C208.305664,30 215,23.3056641 215,15 C215,6.69433594 208.305664,3.55271368e-15 200,3.55271368e-15 L200,3.55271368e-15 Z M200,21.8701172 C190.625,21.8701172 190.625,21.8701172 190.625,15 C190.625,8.12988281 190.625,8.12988281 200,8.12988281 C209.375,8.12988281 209.375,8.12988281 209.375,15 C209.375,21.8701172 209.375,21.8701172 200,21.8701172 L200,21.8701172 Z M197.495117,18.75 L203.75,15 L197.495117,11.25 L197.495117,18.75 Z" id="youtube"></path>
+            </g>
+        </g>
+    </g>
+</svg>

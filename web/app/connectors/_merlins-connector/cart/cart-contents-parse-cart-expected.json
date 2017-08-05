@@ -1,0 +1,24 @@
+{
+    "items": [
+        {
+            "id": "1659",
+            "productId": "7",
+            "href": "https://www.merlinspotions.com/sleeping-draught.html",
+            "configureUrl": "/checkout/cart/configure/id/1659/product_id/7/",
+            "quantity": 1,
+            "itemPrice": "$24.00",
+            "linePrice": "$24.00"
+        },
+        {
+            "id": "1658",
+            "productId": "1",
+            "href": "https://www.merlinspotions.com/eye-of-newt.html",
+            "configureUrl": "/checkout/cart/configure/id/1658/product_id/1/",
+            "quantity": 2,
+            "itemPrice": "$12.00",
+            "linePrice": "$24.00"
+        }
+    ],
+    "subtotal": "$50.40",
+    "orderTotal": "$50.40"
+}

@@ -1,0 +1,23 @@
+//Import the stylesheet from the web scaffold, to maintain consistency
+@import '../../stylesheet';
+@import '../../containers/onboarding/_onboarding'; // sass-lint:disable-line clean-import-paths
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+* {
+    user-select: none;
+    -webkit-touch-callout: none; // sass-lint:disable-line no-misspelled-properties
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}

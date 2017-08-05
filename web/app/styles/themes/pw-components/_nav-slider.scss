@@ -1,0 +1,17 @@
+// Nav Slider Theme
+// ===
+//
+// 1. Absolutely positioned relative a `ReactTransitionGroup` which is
+//    responsible for setting up the positioning context, eg:
+//
+//        <ReactTransitionGroup component="div" style={{position: 'relative'}}>
+//            <NavSlider key={key}>
+//                content
+//            </NavSlider>
+//        </ReactTransitionGroup>
+
+.pw-nav-slider {
+    position: absolute;  // 1
+    top: 0;
+    left: 0;
+}

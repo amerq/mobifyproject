@@ -1,0 +1,31 @@
+// Product Details
+// ===
+
+.t-product-details {
+    // Root Class. Contains all core styles, typically for the template's
+    // wrapper element.
+}
+
+
+// Price
+// ---
+
+.t-product-details__price {
+    font-size: $bigger-font-size;
+    line-height: $huge-line-height;
+}
+
+
+// Nearest Stores
+// ---
+
+.t-product-details__nearest-stores {
+    a {
+        color: $brand-color;
+
+        &:active,
+        &:focus {
+            color: $tertiary-brand-color;
+        }
+    }
+}

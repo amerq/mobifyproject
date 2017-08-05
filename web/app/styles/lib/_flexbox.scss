@@ -1,0 +1,49 @@
+// Flexbox
+// ===
+//
+// Flexbox and align a row of items with a lot of control. Provides a
+// declarative, robust cross-browser way of using flexbox.
+
+// Flexbox root
+// ---
+//
+// Includes gutters, for grid-like functionality.
+//
+// 1. Remove default styles present on common root elements.
+// 2. Ensure in iOS 5 and 6 that flex-direction isn't inherited from
+//    any flexbox parents that has flex-direction set to row-reverse
+
+@mixin flexbox() {
+    display: flex;
+    flex-direction: row; // 2
+    margin: 0; // 1
+    padding: 0; // 1
+
+    list-style: none; // 1
+}
+
+
+// Flex (Grow)
+// ---
+//
+// 1. Ensure inline elements are treated as block-level.
+// 2. Prevent width collapsing in old implementations.
+
+@mixin flex() {
+    display: block; // 1
+    flex: 1 1 auto;
+    width: 100%; // 2
+}
+
+
+// Flex (Shrink)
+// ---
+//
+// Shrink Flexbox items to a minimum size.
+//
+// 1. Ensure width collapses in old implementations.
+
+@mixin flex-shrink() {
+    flex: initial;
+    width: auto; // 1
+}

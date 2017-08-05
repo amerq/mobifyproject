@@ -1,0 +1,32 @@
+{
+    "7": {
+        "id": "7",
+        "title": "Sleeping Draught",
+        "href": "https://www.merlinspotions.com/sleeping-draught.html",
+        "price": "$24.00",
+        "thumbnail": {
+            "src": "https://www.merlinspotions.com/media/catalog/product/cache/1/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/s/l/sleeping-draught-1.jpg",
+            "alt": "Sleeping Draught",
+            "size": {
+                "width": "240px",
+                "height": "300px"
+            }
+        },
+        "available": true
+    },
+    "1": {
+        "id": "1",
+        "title": "Eye Of Newt",
+        "href": "https://www.merlinspotions.com/eye-of-newt.html",
+        "price": "$12.00",
+        "thumbnail": {
+            "src": "https://www.merlinspotions.com/media/catalog/product/cache/1/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/e/y/eye-of-newt-1.jpg",
+            "alt": "Eye Of Newt",
+            "size": {
+                "width": "240px",
+                "height": "300px"
+            }
+        },
+        "available": true
+    }
+}

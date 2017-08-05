@@ -1,0 +1,132 @@
+// Layout utils
+// ===
+
+// Floats
+// ---
+//
+// Writing-direction independent floats. For RTL stylesheets, re-define
+// these styles with the opposite direction. Templates need not be changed.
+
+.u-float-start {
+    float: left;
+}
+
+.u-float-end {
+    float: right;
+}
+
+
+// Contain floats
+// ---
+//
+// Contain all floated children and their margins.
+//
+// 1. Avoid an Opera bug when the contenteditable attribute is included anywhere
+//    else in the document.
+// 2. Contain the the first child’s top margin. Ensures rendering is consistent
+//    with the other common clearfix method, `overflow: hidden`.
+
+.u-clearfix {
+    @include clearfix;
+}
+
+
+// Positioning relative
+// ---
+//
+// Create a new positioning context.
+
+.u-position-relative {
+    position: relative;
+}
+
+
+// Positioning absolute
+// ---
+//
+// Create a new positioning context.
+
+.u-position-absolute {
+    position: absolute;
+}
+
+
+// Positioning fixed
+// ---
+//
+// Create a new positioning context.
+
+.u-position-fixed {
+    position: fixed;
+}
+
+
+// Positioning coordinate
+// ---
+
+.u-position-top {
+    top: 0;
+}
+
+.u-position-right {
+    right: 0;
+}
+
+.u-position-bottom {
+    bottom: 0;
+}
+
+.u-position-left {
+    left: 0;
+}
+
+.u-position-full {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+// Bleed
+// ---
+
+.u-bleed-top {
+    margin-top: -$unit;
+}
+
+.u-bleed-end {
+    margin-right: -$unit;
+}
+
+.u-bleed-bottom {
+    margin-bottom: -$unit;
+}
+
+.u-bleed-start {
+    margin-left: -$unit;
+}
+
+
+// Block Formatting Context
+// ---
+//
+// Create a new Block Formatting Context. BFCs won’t overlap adjacent floats and
+// will contain floated children and their margins.
+
+.u-block-context {
+    overflow: hidden;
+}
+
+
+// Center Piece
+// ---
+//
+// Center Piece is responsible for setting a container to a max-width, and
+// center aligning it when the viewport is larger than that.
+//
+// 1. From Susy, the grid framework
+
+.u-center-piece {
+    @include container($max-width); // 1
+}

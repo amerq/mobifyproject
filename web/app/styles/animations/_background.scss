@@ -1,0 +1,15 @@
+// Background Animations
+// ===
+
+// Background Shimmer
+// ---
+
+@keyframes background-shimmer {
+    0% {
+        transform: translateX(50000%);
+    }
+
+    to {
+        transform: translateX(-50000%);
+    }
+}

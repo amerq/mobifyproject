@@ -1,0 +1,24 @@
+// Shimmer
+// ===
+
+// Background Shimmer
+// ---
+
+@mixin background-shimmer() {
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.03);
+
+    &::after {
+        content: '';
+
+        display: block;
+        width: 1px;
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 100px 75px rgba(0, 0, 0, 0.05);
+
+        animation: 1.5s linear infinite background-shimmer;
+    }
+}

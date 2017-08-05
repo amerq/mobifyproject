@@ -1,0 +1,194 @@
+// Field Theme
+// ---
+//
+
+$field__caution-icon: 'data:image/svg+xml;utf8,<svg width="20px" height="20px" fill="#dc0a3c" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill-rule="evenodd"><g><path d="M10,3 L18,17 L2,17 L10,3 Z M10.7604457,13 L9.23955432,13 L9,7 L11,7 L10.7604457,13 Z M9,15 C9,14.7080853 9.09536447,14.4684428 9.28609626,14.2810651 C9.47682805,14.0936874 9.71479358,14 10,14 C10.2852064,14 10.523172,14.0936874 10.7139037,14.2810651 C10.9046355,14.4684428 11,14.7080853 11,15 C11,15.2919147 10.9046355,15.5315572 10.7139037,15.7189349 C10.523172,15.9063126 10.2852064,16 10,16 C9.71479358,16 9.47682805,15.9063126 9.28609626,15.7189349 C9.09536447,15.5315572 9,15.2919147 9,15 Z"></path></g></g></svg>';
+$field__select-triangle: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="#4E439B"><polygon points="0 0 12 0 5.99940185 6"></polygon></svg>';
+$field__disabled-select-triangle: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="#999999"><polygon points="0 0 12 0 5.99940185 6"></polygon></svg>';
+
+.pw-field {
+    &.pw--error {
+        .pw-field__label {
+            color: $error-color;
+        }
+    }
+}
+
+
+// Inner
+// ---
+
+.pw-field__inner {
+    display: inline-block;
+    width: 100%;
+}
+
+
+// Label Wrap
+// ---
+
+.pw-field__label-wrap {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+
+// Label
+// ---
+//
+// @TODO: Add `pw-field__label` to the SDK component
+
+.pw-field__label {
+    flex: 1 1 auto;
+    margin-bottom: $unit;
+
+    font-weight: $semi-bold-font-weight;
+    font-size: $font-size;
+    line-height: 1em;
+}
+
+
+// Hint
+// ---
+
+.pw-field__hint {
+    flex: 0 0 auto;
+
+    font-size: $small-font-size;
+}
+
+
+// Caption
+// ---
+
+.pw-field__caption {
+    padding-top: $unit/2;
+
+    color: $neutral-50;
+    font-size: $small-font-size;
+    line-height: $small-line-height;
+
+    fill: $neutral-50;
+}
+
+
+// Error
+// ---
+
+.pw-field__error {
+    margin-top: $unit;
+
+    color: $error-color;
+
+    &::before {
+        content: '';
+
+        display: inline-block;
+        width: $unit*2.5;
+        height: $unit*2.5;
+        margin-right: $unit/2;
+
+        background-image: url($field__caution-icon);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        vertical-align: middle;
+    }
+}
+
+
+// States
+// ---
+//
+// 1. Align the caption with its checkbox or radio
+// 2. Margin no longer needed, since we know there is no input below it (the
+//    input is the checkbox/radio on the side in this state)
+// 3. Vertical center align the label to the radio
+
+.pw-field.pw--error {
+    border-color: $error-color;
+}
+
+.pw-field.pw--is-check-radio {
+    .pw-field__caption {
+        padding-left: $unit * 4; // 1
+    }
+
+    .pw-field__inner {
+        display: flex;
+    }
+
+    .pw-field__label {
+        margin-bottom: 0; // 2
+
+        font-weight: normal;
+    }
+
+    .pw-field__label-wrap {
+        margin-top: $sub-unit*1.5; // 3
+    }
+
+    &.pw--checked {
+        .pw-field__label {
+            font-weight: $semi-bold-font-weight;
+        }
+    }
+}
+
+
+// Modifier Select
+// ---
+//
+// 1. Used to position absolute select triangle
+// 2. Avoid covering the field border
+// 3. Fade out effect to cover long text
+
+.pw-field.pw--has-select {
+    .pw-field__input {
+        position: relative; // 1
+
+        &::after {
+            content: '';
+
+            position: absolute; // 1
+            top: 50%;
+            right: 0;
+
+            width: 12px;
+            height: 6px;
+
+            background-image: url($field__select-triangle); // @TODO replace with Icon component
+            background-size: 12px 6px;
+
+            transform: translate(-100%, -50%);
+
+            pointer-events: none;
+        }
+
+        &::before {
+            // 3
+            content: '';
+
+            position: absolute;
+            top: 1px; // 2
+            right: 1px; // 2
+
+            width: 25%;
+            height: 42px;
+
+            background: linear-gradient(to left, $neutral-00 40%, rgba($neutral-00, 0) 70%);
+
+            pointer-events: none;
+        }
+    }
+
+    .pw-field__input.pw--disabled {
+        &::after {
+            background-image: url($field__disabled-select-triangle); // @TODO replace with Icon component
+        }
+
+        &::before {
+            background: linear-gradient(to left, $neutral-15 40%, transparent 70%);
+        }
+    }
+}

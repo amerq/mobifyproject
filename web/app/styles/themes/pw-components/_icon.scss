@@ -1,0 +1,23 @@
+// Icon Theme
+// ===
+
+.pw-icon {
+    width: $unit*2.5;
+    height: $unit*2.5;
+    padding: 2px;
+
+    &.pw--small {
+        width: $unit*1.5; // 12px
+        height: $unit*1.5; // 12px
+    }
+
+    &.pw--medium {
+        width: $unit*3; // 24px
+        height: $unit*3; // 24px
+    }
+
+    &.pw--large {
+        width: $unit*4; // 32px
+        height: $unit*4; // 32px
+    }
+}

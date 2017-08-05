@@ -1,0 +1,107 @@
+// CheckoutShipping
+// ===
+
+.t-checkout-payment {
+    // Root Class. Contains all core styles, typically for the template's
+    // wrapper element.
+}
+
+
+// Progress
+// ---
+
+.t-checkout-payment__progress {
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+// Form
+// ---
+//
+// @TODO: Add `pw-field__label` to SDK field component
+
+.t-checkout-payment__form {
+    .pw-field__label {
+        font-size: 15px;
+    }
+}
+
+.t-checkout-payment__add-new-card {
+    transition: padding 0.2s ease-out;
+}
+
+.t-checkout-payment__add-new-card-form {
+    opacity: 0;
+
+    animation: fade-in 0.2s 0.2s ease-out 1 forwards;
+}
+
+
+// Fixed Place Order
+// ---
+
+.t-checkout-payment__fixed-place-order {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    opacity: 0;
+    box-shadow: rgba($neutral-70, 0.15) 0 0 12px;
+
+    transform: translateY(100%);
+
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+
+    &.t--show {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+// Mobile Styles
+// ---
+
+@include susy-breakpoint($mobile-breakpoint, $mobile-layout) {
+    .t-checkout-payment__title {
+        padding-left: $unit * 1.5;
+
+        background-color: trasparent; // ui_kit_value: $background-color;
+    }
+}
+
+
+// Tablet Styles
+// ---
+
+@include susy-breakpoint($tablet-breakpoint, $tablet-layout) {
+    .t-checkout-payment__card {
+        border-right: 1px solid $neutral-15;
+        border-left: 1px solid $neutral-15;
+    }
+}
+
+
+// Desktop Styles
+// ---
+//
+// 1. Add some white space between the order summary and footer
+
+@include susy-breakpoint($desktop-breakpoint, $desktop-layout) {
+    .t-checkout-payment__card {
+        border-right: 1px solid $neutral-15;
+        border-left: 1px solid $neutral-15;
+    }
+
+    .t-checkout-payment__fixed-place-order {
+        display: none;
+    }
+
+    .t-checkout-payment__order-summary {
+        margin-bottom: $unit*2; // 1
+    }
+}

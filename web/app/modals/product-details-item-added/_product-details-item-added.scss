@@ -1,0 +1,27 @@
+// Added to Cart Modal
+// ---
+//
+// 1. Provide the space within which the Close button with be vertically and
+//    horisontally centered in order to match the mockup
+
+.m-product-details__item-added-modal {
+    .pw-sheet__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pw-sheet__wrapper {
+        justify-content: flex-end;
+    }
+}
+
+.m-product-details__item-added-modal-close {
+    width: $unit*7; // 1
+    height: $unit*7; // 1
+}
+
+.m-product-details__item-added-modal-icon {
+    color: $neutral-30;
+
+    fill: $neutral-30;
+}

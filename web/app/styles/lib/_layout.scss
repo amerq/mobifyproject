@@ -1,0 +1,22 @@
+// Contain floats
+// ---
+//
+// Contain all floated children and their margins.
+//
+// 1. Avoid an Opera bug when the contenteditable attribute is included anywhere
+//    else in the document.
+// 2. Contain the the first child’s top margin. Ensures rendering is consistent
+//    with the other common clearfix method, `overflow: hidden`.
+
+@mixin clearfix() {
+    &::before,
+    &::after {
+        content: ' '; // 1
+
+        display: table; // 2
+    }
+
+    &::after {
+        clear: both;
+    }
+}

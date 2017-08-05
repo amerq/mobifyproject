@@ -1,0 +1,15 @@
+extends:
+  - './node_modules/mobify-code-style/es6/mobify-es6-react-a11y.yml'
+settings:
+  import/resolver:
+    webpack:
+      config: './webpack/base.main.js'
+  import/extensions: ['.js', '.jsx']
+plugins:
+  - 'merlins-connector'
+rules:
+  react/react-in-jsx-scope: error
+  merlins-connector/use-merlins: error
+globals:
+  process: false
+parser: "babel-eslint"

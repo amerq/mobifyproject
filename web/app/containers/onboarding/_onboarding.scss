@@ -1,0 +1,59 @@
+// Onboarding
+// ===
+//
+// @TODO: Come back and clean up the below selectors when working on onboarding.
+
+.t-onboarding {
+    height: 100vh;
+
+    .pw-carousel,
+    .carousel-item {
+        height: 100%;
+    }
+
+    .item-title {
+        margin: 10px 46px 0;
+
+        font-size: $big-font-size;
+        line-height: $big-line-height;
+        letter-spacing: 0;
+    }
+
+    .item-subtitle {
+        margin: 16px 42px 0;
+
+        color: #3a3a48;
+        font-size: $font-size;
+        line-height: $line-height;
+    }
+
+    .button-wrapper + .button-wrapper {
+        margin-top: 10px !important;
+    }
+
+    .carousel-item-wrapper {
+        display: flex;
+        height: 90%;
+        margin: 40px 20px 0;
+        padding: 20px;
+
+        background-color: $neutral-00;
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-item-image {
+        max-width: 65%;
+    }
+
+    .pw-carousel__controls {
+        position: relative;
+        top: -10px;
+
+        height: 5%;
+        padding-top: 0;
+    }
+
+    .pw-carousel__inner {
+        height: 95%;
+    }
+}

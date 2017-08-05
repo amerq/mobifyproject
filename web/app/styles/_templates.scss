@@ -1,0 +1,19 @@
+// Templates (a.k.a. containers!)
+// ===
+
+@import '../containers/app/app';
+@import '../containers/cart/cart';
+@import '../containers/checkout-payment/checkout-payment';
+@import '../containers/checkout-shipping/checkout-shipping';
+@import '../containers/home/home';
+@import '../containers/product-list/product-list';
+@import '../containers/header/header';
+@import '../containers/footer/footer';
+@import '../containers/login/login';
+@import '../containers/product-details/product-details';
+@import '../containers/checkout-header/checkout-header';
+@import '../containers/checkout-footer/checkout-footer';
+@import '../containers/checkout-shipping/checkout-shipping';
+@import '../containers/checkout-payment/checkout-payment';
+@import '../containers/checkout-confirmation/checkout-confirmation';
+@import '../containers/offline/offline';

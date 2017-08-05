@@ -1,0 +1,2 @@
+Place custom plugins in this directory and then register them in
+AppDelegate.swift using the AstroViewController's init().
